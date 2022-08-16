@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>How To Install Vue 3 in Laravel 9 with Vite</title>
+        <title inertia>{{ config('app.name', 'Laravel') }}</title>
 
-    @vite('resources/css/app.css')
-</head>
+        <!-- Fonts -->
+        <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
 
-<body>
-    <div id="app"></div>
-
-    @vite('resources/js/app.js')
-</body>
-
+        <!-- Scripts -->
+        @routes
+        @vite('resources/js/app.js')
+        @inertiaHead
+    </head>
+    <body class="font-sans antialiased">
+        @inertia
+    </body>
 </html>
