@@ -26,6 +26,8 @@ class TodoController extends Controller
 
     public function create(Request $request)
     {
+        $request->request->add(['user_id' => auth()->id()]);
+
         Validator::make($request->all(), [
             'user_id' => ['required'],
             'name' => ['required'],
@@ -33,8 +35,6 @@ class TodoController extends Controller
             'priority' => ['required'],
             'completed' => ['required'],
         ])->validate();
-
-        error_log($request);
 
         Todo::create($request->all());
 

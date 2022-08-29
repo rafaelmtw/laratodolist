@@ -66,7 +66,6 @@ export default {
         submit() {
             const form = reactive(
                 {
-                    user_id: 1,
                     name: this.name,
                     description: this.description,
                     priority: 1,
