@@ -35,21 +35,22 @@ class Todo extends Model
      * @var string[]
      */
     protected $fillable = [
+        'user_id',
         'name',
         'description',
         'priority',
         'completed'
     ];
 
-     /**
+    /**
      * The event map for the model.
      * https://laravel.com/docs/9.x/eloquent#events
      * 
      * @var array
      */
     protected $dispatchesEvents = [
-        'created' => TeamCreated::class,
-        'updated' => TeamUpdated::class,
-        'deleted' => TeamDeleted::class,
+        // 'created' => TeamCreated::class,
+        // 'updated' => TeamUpdated::class,
+        // 'deleted' => TeamDeleted::class,
     ];
 }

@@ -6,6 +6,7 @@ defineProps({
     canRegister: Boolean,
     laravelVersion: String,
     phpVersion: String,
+
 })
 </script>
 
@@ -27,11 +28,15 @@ defineProps({
             </template>
         </div>
 
-        <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-            <h1>Welcome</h1>
+        <div class="flex-col max-w-6xl mx-auto sm:px-6 lg:px-8">
+            <h1>Personal Reminder</h1>
 
             <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                Laravel v{{ laravelVersion }} (PHP v{{ phpVersion }})
+                Laravel v{{  laravelVersion  }} (PHP v{{  phpVersion  }})
+            </div>
+
+            <div class="mt-4 ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
+                ©rafaelmtw
             </div>
 
         </div>

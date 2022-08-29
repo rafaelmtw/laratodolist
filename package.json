@@ -25,6 +25,8 @@
         "@inertiajs/inertia-vue3": "^0.6.0",
         "@inertiajs/progress": "^0.2.7",
         "@vitejs/plugin-vue": "^3.0.3",
-        "vue": "^3.2.36"
+        "daisyui": "^2.24.0",
+        "vue": "^3.2.36",
+        "vue-router": "^4.1.5"
     }
 }
