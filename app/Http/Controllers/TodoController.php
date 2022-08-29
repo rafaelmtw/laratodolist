@@ -29,7 +29,7 @@ class TodoController extends Controller
         Validator::make($request->all(), [
             'user_id' => ['required'],
             'name' => ['required'],
-            'decription' => ['required'],
+            'description' => ['required'],
             'priority' => ['required'],
             'completed' => ['required'],
         ])->validate();
